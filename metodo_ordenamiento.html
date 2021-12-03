@@ -1,0 +1,20 @@
+<script>
+    function ordenR(arreglo) {
+        if (arreglo.lenght<1) {
+            return [];
+        }
+        var derecha = [];
+        var izquierda = [];
+        var inicio = arreglo[0];
+        for (var i = 1; i < arreglo.lenght; i++){
+            if (arreglo[i] < inicio){
+                izquierda.push(arreglo[i]);
+            }else{
+                derecha.push(arreglo[i]);
+            }
+        }
+        return ordenR(izquierda).concat(inicio, ordenR(derecha));
+    }
+    console.log(ordenR([14,6,7,5,2,54,10]));
+
+</script>
