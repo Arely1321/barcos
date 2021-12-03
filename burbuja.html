@@ -1,0 +1,21 @@
+<script>
+function Burbuja() {
+    var lista = [38, 3, 27, 63, 22, 14, 44, 53, 78, 1, 87, 50, 15, 6, 31];
+    var n, i, k, x;
+    n = lista.length;
+    console.log(lista); 
+    for (k = 1; k < n; k++) {
+        for (i = 0; i < (n - k); i++) {
+            if (lista[i] > lista[i + 1]) {
+                x = lista[i];
+                lista[i] = lista[i + 1];
+                lista[i + 1] = x;
+            }
+        }
+    }
+
+    console.log(lista);
+}
+
+
+</script>
